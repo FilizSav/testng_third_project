@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.CarvanaHomePage;
 import pages.CarvanaSearchCarPage;
+import utillities.ConfigReader;
 import utillities.Waiter;
 import java.util.ArrayList;
 import java.util.List;
@@ -60,10 +61,10 @@ public class CarvanaHomePageTest extends BasePageTest {
     @Test(priority = 6, description = "Validate the search result tiles")
     public void validateSearchResults() {
         carvanaHomePage.searchButton.click();
-        carvanaSearchCarPage.searchBox.sendKeys("mercedes-benz");
+        carvanaSearchCarPage.searchBox.sendKeys(ConfigReader.getProp("searchCar"));
         carvanaSearchCarPage.goButton.click();
         Waiter.pause(8);
-        Assert.assertTrue(driver.getCurrentUrl().contains("mercedes-benz"));
+        Assert.assertTrue(driver.getCurrentUrl().contains(ConfigReader.getProp("searchCar")));
 
         List<WebElement> allItems = new ArrayList<>(carvanaSearchCarPage.images);
         allItems.addAll(carvanaSearchCarPage.favoriteIcon);
