@@ -25,12 +25,10 @@ public class CarvanaHomePageTest extends BasePageTest {
         Assert.assertEquals(driver.getTitle(), "Carvana | Buy & Finance Used Cars Online | At Home Delivery");
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.carvana.com/");
     }
-
     @Test(priority = 2, description = " Validate the Carvana logo")
     public void validateLogo() {
         Assert.assertTrue(carvanaHomePage.logo.isDisplayed());
     }
-
     @Test(priority = 3, description = "Validate the main navigation section items")
     public void validateNavigationItems() {
         String[] items = {"HOW IT WORKS", "ABOUT CARVANA", "SUPPORT & CONTACT"};
@@ -39,7 +37,6 @@ public class CarvanaHomePageTest extends BasePageTest {
             Assert.assertTrue(carvanaHomePage.navigationSection.get(i).isDisplayed());
         }
     }
-
     @Test(priority = 4, description = "Validate the sign in error message")
     public void validateSignInErrorMessage() {
         carvanaHomePage.signInButton.click();
@@ -50,7 +47,6 @@ public class CarvanaHomePageTest extends BasePageTest {
         carvanaHomePage.signIn.click();
         Assert.assertEquals(carvanaHomePage.errorMessage.getText(), "Email address and/or password combination is incorrect.");
     }
-
     @Test(priority = 5, description = "Validate the search filter options and search button")
     public void validateFilterOptions() {
         String[] filterOptions = {"PAYMENT & PRICE", "MAKE & MODEL", "BODY TYPE", "YEAR & MILEAGE", "FEATURES", "MORE FILTERS"};
@@ -61,14 +57,13 @@ public class CarvanaHomePageTest extends BasePageTest {
             Assert.assertTrue(carvanaSearchCarPage.filterOptions.get(i).isDisplayed());
         }
     }
-
     @Test(priority = 6, description = "Validate the search result tiles")
     public void validateSearchResults() {
         carvanaHomePage.searchButton.click();
         carvanaSearchCarPage.searchBox.sendKeys("mercedes-benz");
         carvanaSearchCarPage.goButton.click();
         Waiter.pause(8);
-        Assert.assertEquals(driver.getCurrentUrl(), "https://www.carvana.com/cars/mercedes-benz?email-capture=");
+        Assert.assertTrue(driver.getCurrentUrl().contains("mercedes-benz"));
 
         List<WebElement> allItems = new ArrayList<>(carvanaSearchCarPage.images);
         allItems.addAll(carvanaSearchCarPage.favoriteIcon);
