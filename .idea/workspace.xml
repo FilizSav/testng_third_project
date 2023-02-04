@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eca59ea7-da2e-4e44-a884-27fe2438df1d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CarvanaSearchCarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CarvanaSearchCarPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/scripts/CarvanaHomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/scripts/CarvanaHomePageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

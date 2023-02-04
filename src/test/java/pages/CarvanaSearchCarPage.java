@@ -29,4 +29,7 @@ public class CarvanaSearchCarPage extends BasePage{
     @FindBy(css = "div[data-testid='price']")
     public List<WebElement> price;
 
+    @FindBy(css = "svg[data-qa='arrow-forward']")
+    public WebElement nextButton;
+
 }

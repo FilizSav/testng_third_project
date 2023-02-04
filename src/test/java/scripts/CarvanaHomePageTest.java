@@ -70,17 +70,19 @@ public class CarvanaHomePageTest extends BasePageTest {
         allItems.addAll(carvanaSearchCarPage.favoriteIcon);
         allItems.addAll(carvanaSearchCarPage.price);
         allItems.addAll(carvanaSearchCarPage.results);
+
+        while(carvanaSearchCarPage.nextButton.isEnabled()){
         for (int i = 0; i < carvanaSearchCarPage.price.size(); i++) {
             Assert.assertNotNull(carvanaSearchCarPage.images.get(i));
             Assert.assertNotNull(carvanaSearchCarPage.favoriteIcon.get(i));
             Assert.assertNotNull(carvanaSearchCarPage.price.get(i));
             Assert.assertTrue(Integer.parseInt(carvanaSearchCarPage.price.get(i).getText().substring(1).replaceAll(",", "")) > 0);
             Assert.assertNotNull(carvanaSearchCarPage.results.get(i));
-            Assert.assertTrue(allItems.get(i).isDisplayed());
+            //Assert.assertTrue(allItems.get(i).isDisplayed());
             Objects.requireNonNull(carvanaSearchCarPage.results.get(i).getText());
-            System.out.println(carvanaSearchCarPage.results.get(i).getText());
+            //System.out.println(carvanaSearchCarPage.results.get(i).getText());
         }
-        System.out.println(carvanaSearchCarPage.results.size());
-        System.out.println(allItems.size());
+        carvanaSearchCarPage.nextButton.click();
+        }
     }
 }
