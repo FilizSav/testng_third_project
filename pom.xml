@@ -44,7 +44,7 @@
                         <configuration>
                             <suiteXmlFiles>
                                 <!-- TestNG suite XML files -->
-                                <suiteXmlFile></suiteXmlFile>
+                                <suiteXmlFile>Regression.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>

@@ -1,6 +1,5 @@
 package scripts;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -8,9 +7,7 @@ import org.testng.annotations.Test;
 import pages.CarvanaHomePage;
 import pages.CarvanaSearchCarPage;
 import utillities.Waiter;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
